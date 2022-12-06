@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEDS Burger</title>
+    <link rel="stylesheet" href="01.css" />
+    <link rel="shortcut icon" href="🍔" type="image/x-icon">
+  </head>
+  <body>
+    <div class="center">
+      <article class="box">
+        <img src="burger2.png" alt="" height="200" />
+
+        <h1>Classic burger</h1>
+        <p>
+          Klassisk streetburgare med bifftomat, krispsallad, dubbla skivor ost,
+          Bastarddressing och rödlök. (Senap, Laktos, Gluten, Selleri, Mjölk)
+        </p>
+
+        <button type="button" class="collapsible">
+          <div class="allbtn">
+            <div class="menurow">
+              <div class="menuname">Adapt</div>
+              <div class="arrow">▼</div>
+            </div>
+
+            <div class="info">Required</div>
+          </div>
+        </button>
+        <div class="content">
+          <div class="radio-button">
+            <div class="row">
+                
+              <input type="radio" name="extra" id="" checked />
+              <label for="">Beef</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="collapsible">
+          <div class="allbtn">
+            <div class="menurow">
+              <div class="menuname">Add</div>
+              <div class="arrow">▼</div>
+            </div>
+
+            <div class="info">Add up to 36</div>
+          </div>
+        </button>
+
+        <div class="content">
+            <div class="menurow" onclick="addExtra('Beef patty')">
+            
+          <label for="" class="extra"><img src="add.png" height="10px" style="margin-right: 5px;">Beef patty</label>
+            <span>+SEK 40.00</span>
+        </div>
+
+        <div class="menurow" onclick="addExtra('Jalapeno')">
+          <label for="" class="extra" 
+            ><img src="add.png" height="10px" style="margin-right: 5px;">Jalapeno</label
+          >
+          <span>+SEK 10.00</span>
+        </div>
+
+        <div class="menurow" onclick="addExtra('Extra Cheese')">
+          <label for="" class="extra" 
+            ><img src="add.png" height="10px" style="margin-right: 5px;">Extra Cheese</label
+          >
+          <span>+SEK 10.00</span>
+        </div>
+
+        <div class="menurow" onclick="addExtra('Onion rings')">
+          <label for="" class="extra" 
+            ><img src="add.png" height="10px" style="margin-right: 5px;">Onion rings</label
+          >
+          <span>+SEK 20.00</span>
+        </div>
+        </div>
+
+        <button type="button" class="collapsible">
+          <div class="allbtn">
+            <div class="menurow">
+              <div class="menuname">Remove</div>
+              <div class="arrow">▼</div>
+            </div>
+
+            <div class="info">Remove up to 4</div>
+          </div>
+        </button>
+        <div class="content">
+          <div class="radio-button">
+            <div class="row">
+              <input type="checkbox" name="" id="" /><label for=""
+                >Cheese</label
+              >
+            </div>
+            <div class="row">
+              <input type="checkbox" name="" id="" /><label for=""
+                >Beef tomato</label
+              >
+            </div>
+            <div class="row">
+              <input type="checkbox" name="" id="" /><label for=""
+                >Red Onion</label
+              >
+            </div>
+            <div class="row">
+              <input type="checkbox" name="" id="" />
+              <label for="">Lettuce</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="collapsible">
+          <div class="allbtn">
+            <div class="menurow">
+              <div class="menuname">Choose bread</div>
+              <div class="arrow">▼</div>
+            </div>
+
+            <div class="info">Choose one</div>
+          </div>
+        </button>
+        <div class="content">
+            <div class="radio-button">
+               
+                  <div class="row">
+                    <input
+                      type="radio"
+                      name="bread"
+                      id="glutenfri"
+                    />
+                    <label for="glutenfri">Gluten free bread</label> <span></span>
+                  </div>
+                  <div class="row">
+                    <input
+                      type="radio"
+                      name="bread"
+                      id="brioche"
+                      checked
+                    />
+                    <label for="brioche">Brioche</label> <span></span>
+                  </div>
+                  <div class="row">
+                    <input
+                      type="radio"
+                      name="bread"
+                      id="sesam"
+                    />
+                    <label for="sesam">Sesam</label> <span></span>
+                  </div>
+                
+            </div>
+        </div>
+
+        <button type="button" class="collapsible">
+          <div class="allbtn">
+            <div class="menurow">
+              <div class="menuname">Choose your side</div>
+              <div class="arrow">▼</div>
+            </div>
+
+            <div class="info">Required</div>
+          </div>
+        </button>
+        <div class="content">
+          <div class="radio-button">
+            <div class="menurow">
+              <div class="row">
+                <input
+                  type="radio"
+                  name="side"
+                  onclick="addExtra('Pommes')"
+                  id="pommes"
+                />
+                <label for="pommes" class="extra">Pommes</label> <span></span>
+              </div>
+            </div>
+            <div class="menurow">
+              <div class="row">
+                <input
+                  type="radio"
+                  onclick="addExtra('Sweet potato')"
+                  name="side"
+                  id="sweet"
+                  value="checked"
+                />
+                <label for="sweet" class="extra">Sweet potato</label>
+              </div>
+              <span>+SEK 30.00</span>
+            </div>
+
+            <div class="menurow">
+              <div class="row">
+                <input
+                  type="radio"
+                  name="side"
+                  onclick="addExtra('Truffle fries')"
+                  id="truffle"
+                />
+                <label for="truffle" class="extra">Truffle fries</label>
+               
+              </div>
+              <span>+SEK 40.00</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="collapsible">
+          <div class="allbtn">
+            <div class="menurow">
+              <div class="menuname">Choose your dip</div>
+              <div class="arrow">▼</div>
+            </div>
+          </div>
+        </button>
+        <div class="content">
+          <div class="radio-button">
+            <div class="menurow">
+            <div class="row">
+              <input
+                type="checkbox"
+                onclick="addExtra('Ketchup')"
+                name="ketchup"
+                id="ketchup"
+              /><label for="ketchup" onclick="addExtra(event)" class="extra"
+                >Ketchup</label
+              >
+            </div>
+            <span>+SEK 5.00</span>
+        </div>
+        <div class="menurow">
+            <div class="row">
+              <input
+                type="checkbox"
+                onclick="addExtra('Mayo')"
+                name="mayo"
+                id="mayo"
+              /><label for="mayo" onclick="addExtra(event)" class="extra"
+                >Mayo</label
+              >
+            </div>
+            <span>+SEK 5.00</span>
+        </div>
+        <div class="menurow">
+            <div class="row">
+              <input
+                type="checkbox"
+                onclick="addExtra('Cheddar')"
+                name="cheddar"
+                id="cheddar"
+              /><label for="cheddar" onclick="addExtra(event)" class="extra"
+                >Cheddar</label
+              >
+            </div>
+            <span>+SEK 10.00</span>
+        </div>
+          </div>
+        </div>
+
+        <button type="button" class="collapsible">
+          <div class="allbtn">
+            <div class="menurow">
+              <div class="menuname">Choose your drink</div>
+              <div class="arrow">▼</div>
+            </div>
+
+            <div class="info">Required (On the house)</div>
+          </div>
+        </button>
+        <div class="content">
+          <div class="radio-button">
+            <div class="row">
+              <input type="radio" name="drink" id="" checked />
+              <label for="">Cola</label>
+            </div>
+            <div class="row">
+              <input type="radio" name="drink" id="" />
+              <label for="">Fanta</label>
+            </div>
+            <div class="row">
+              <input type="radio" name="drink" id="" />
+              <label for="">Sprite</label>
+            </div>
+          </div>
+        </div>
+
+        <button class="sendBtn">Send order</button>
+      </article>
+    </div>
+    <script src="01.js"></script>
+  </body>
+</html>
