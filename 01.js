@@ -75,6 +75,7 @@ function addExtra(str) {
             onioncounter++;
             onionLabel.innerHTML = onioncounter;
             console.log(price);
+            //test
           }
 
           break;
