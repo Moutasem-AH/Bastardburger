@@ -28,7 +28,7 @@ input:focus-visible{
 }
 
 button{
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 8px 15px;
     box-shadow: 0px 0px 2px 0px #888888;
     border:0;
@@ -44,16 +44,17 @@ button:hover{
 button{
     background-color: #000000;
     color:white;
-    padding:0.7em;
+    padding:0.7em;  
     cursor: pointer;
 }
 
 
 label{
     font-size: 0.8em;
-    margin-bottom:0.6em;
     font-weight: bold;
     color:#3b3b3b;
+ 
+    
 }
 
 label, 
@@ -170,4 +171,39 @@ font-weight: 300;
     grid-area: info;
     justify-content: start;
     font-size: 0.7em;
+  }
+
+  #plusbutton{
+    height: 20px;
+    margin-right: 5px;
+    align-self: center;
+  }
+
+  #minusbutton{
+    height: 23px;
+    margin-right: 5px;
+    align-self: center;
+  }
+
+  .counter{
+    align-self: center;
+    margin-right: 5px;
+    font-size: 0.8em;
+    font-weight: 200;
+  }
+
+  .menubutton{
+    height: 10px;
+    align-self: center;
+  }
+
+  .counterbeef, .counteronion, .countercheese, .counterjalapeno{
+    padding : 10px;
+    font-size: 0.7em;
+    color: gray
+  }
+
+  .additems{
+    margin-top: 10px;
+    margin-left: 10px;
   }

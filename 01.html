@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEDS Burger</title>
     <link rel="stylesheet" href="01.css" />
-    <link rel="shortcut icon" href="🍔" type="image/x-icon">
+    <link rel="shortcut icon" href="tedslogo.png" type="image/x-icon">
   </head>
   <body>
     <div class="center">
@@ -46,35 +46,53 @@
               <div class="arrow">▼</div>
             </div>
 
-            <div class="info">Add up to 36</div>
+            <div class="info">Add up to 24</div>
           </div>
         </button>
 
         <div class="content">
-            <div class="menurow" onclick="addExtra('Beef patty')">
-            
-          <label for="" class="extra"><img src="add.png" height="10px" style="margin-right: 5px;">Beef patty</label>
+            <div class="menurow">
+                <div class="row">
+                <img src="minus.png" class="menubutton" onclick="subtractExtra('Beef patty')">
+                <div class="counterbeef">0</div>
+                <img src="add.png" class="menubutton" onclick="addExtra('Beef patty')">
+                <label for="" class="extra additems" onclick="addExtra('Beef patty')">Beef patty</label>
+            </div>
+                
             <span>+SEK 40.00</span>
         </div>
 
-        <div class="menurow" onclick="addExtra('Jalapeno')">
-          <label for="" class="extra" 
-            ><img src="add.png" height="10px" style="margin-right: 5px;">Jalapeno</label
-          >
+
+        
+        <div class="menurow">
+            <div class="row">
+                <img src="minus.png" class="menubutton" onclick="subtractExtra('Jalapeno')">
+                <div class="counterjalapeno">0</div>
+                <img src="add.png" class="menubutton" onclick="addExtra('Jalapeno')">
+                <label for="" class="extra additems" onclick="addExtra('Jalapeno')">Jalapeno</label>
+            </div>
           <span>+SEK 10.00</span>
         </div>
 
-        <div class="menurow" onclick="addExtra('Extra Cheese')">
-          <label for="" class="extra" 
-            ><img src="add.png" height="10px" style="margin-right: 5px;">Extra Cheese</label
-          >
+        <div class="menurow">
+            <div class="row">
+                <img src="minus.png" class="menubutton" onclick="subtractExtra('Extra Cheese')">
+                <div class="countercheese">0</div>
+                <img src="add.png" class="menubutton" onclick="addExtra('Extra Cheese')">
+                <label for="" class="extra additems" onclick="addExtra('Extra Cheese')">Extra Cheese</label>
+            </div>
+        
           <span>+SEK 10.00</span>
         </div>
 
-        <div class="menurow" onclick="addExtra('Onion rings')">
-          <label for="" class="extra" 
-            ><img src="add.png" height="10px" style="margin-right: 5px;">Onion rings</label
-          >
+        <div class="menurow">
+            <div class="row">
+                <img src="minus.png" class="menubutton" onclick="subtractExtra('Onion rings')">
+                <div class="counteronion">0</div>
+                <img src="add.png" class="menubutton" onclick="addExtra('Onion rings')">
+                <label for="" class="extra additems" onclick="addExtra('Onion rings')">Onion rings</label>
+            </div>
+         
           <span>+SEK 20.00</span>
         </div>
         </div>
@@ -286,8 +304,13 @@
             </div>
           </div>
         </div>
+        <div class="menurow">
+            <img src="minus.png" id="minusbutton" onclick="minusToOrder()">
+            <div class="counter">1</div>
+            <img src="add.png" id="plusbutton" onclick="addToOrder()">
+            <button class="sendBtn">Send order</button>
 
-        <button class="sendBtn">Send order</button>
+        </div>
       </article>
     </div>
     <script src="01.js"></script>
